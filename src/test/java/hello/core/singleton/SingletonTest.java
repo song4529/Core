@@ -2,7 +2,7 @@ package hello.core.singleton;
 
 import hello.core.AppConfig;
 import hello.core.member.MemberService;
-import org.assertj.core.api.AssertionsForClassTypes;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -38,7 +38,7 @@ public class SingletonTest {
         System.out.println("singletonService1 = " + singletonService1);
         System.out.println("singletonService2 = " + singletonService2);
         // singletonService1 == singletonService2
-        AssertionsForClassTypes.assertThat(singletonService1).isSameAs(singletonService2);
+        assertThat(singletonService1).isSameAs(singletonService2);
         singletonService1.logic();
     }
 
@@ -57,6 +57,6 @@ public class SingletonTest {
         System.out.println("memberService1 = " + memberService1);
         System.out.println("memberService2 = " + memberService2);
         //memberService1 == memberService2
-        AssertionsForClassTypes.assertThat(memberService1).isSameAs(memberService2);
+        assertThat(memberService1).isSameAs(memberService2);
     }
 }
