@@ -35,6 +35,8 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 	//lombok 라이브러리 추가 끝
+
+	implementation 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
 }
 
 tasks.named('test') {
